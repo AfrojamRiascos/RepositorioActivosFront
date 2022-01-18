@@ -21,7 +21,6 @@ export class AddComponent implements OnInit {
     .subscribe(data=>{
       alert("Agregado con Éxito!!!");
       this.router.navigate(["listar"]);
-      console.log(data);
     })
   }
 

@@ -18,4 +18,13 @@ export class ServiceService {
   addArticulo(articulos:Articulos){
     return this.http.post<Articulos>(`${this.Url}/addArticulos`, articulos);
   }
+
+  getArticulosId(id:number){
+    return this.http.get<Articulos>(`${this.Url}+"/"+id`);
+  }
+
+  updateArticulo(articulos:Articulos){
+    return this.http.put<Articulos>(`${this.Url}/updateArticulos`, articulos);
+  }
+
 }
