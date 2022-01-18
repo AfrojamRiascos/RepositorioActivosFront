@@ -7,25 +7,25 @@
             <form action="" method="post">
                 <div class="form-group">
                     <label for="">Nombre Articulo</label>
-                    <input type="text" class="form-control">
+                    <input type="text" class="form-control" [(ngModel)]="articulos.articuloNombre" name="name">
                 </div>
                 <div class="form-group">
                     <label for="">Fecha de Compra</label>
-                    <input type="text" class="form-control">
+                    <input type="text" class="form-control" [(ngModel)]="articulos.fechaCompra" name="name">
                 </div>
                 <div class="form-group">
                     <label for="">Valor Compra</label>
-                    <input type="text" class="form-control">
+                    <input type="text" class="form-control" [(ngModel)]="articulos.valorCompra" name="name">
                 </div>
                 <div class="form-group">
                     <label for="">Tipo de Articuco</label>
-                    <input type="text" class="form-control">
+                    <input type="text" class="form-control" [(ngModel)]="articulos.tipoArticulo" name="name">
                 </div>
                 <div class="form-group">
                     <label for="">Serial</label>
-                    <input type="text" class="form-control">
+                    <input type="text" class="form-control" [(ngModel)]="articulos.serial" name="name">
                 </div>
-                <button class="btn btn-danger" style="margin-top: 10px;">Guardar</button>
+                <button (click)="Guardar(articulos)" class="btn btn-danger" style="margin-top: 10px;">Guardar</button>
             </form>
         </div>
     </div>

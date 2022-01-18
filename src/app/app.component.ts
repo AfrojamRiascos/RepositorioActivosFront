@@ -7,13 +7,12 @@ import { Router } from '@angular/router';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Activos';
+  title = 'Activos Empresa';
 
   constructor(private router:Router){}
 
   Listar(){
     this.router.navigate(["listar"]);
-    console.log("Botón Listar");
   }
 
   Crear(){

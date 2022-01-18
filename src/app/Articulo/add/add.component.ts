@@ -10,16 +10,18 @@ import { ServiceService } from 'src/app/Service/service.service';
 })
 export class AddComponent implements OnInit {
 
+  articulos:Articulos = new Articulos();
   constructor(private router:Router, private service:ServiceService) { }
 
   ngOnInit() {
   }
 
   Guardar(articulos:Articulos){
-    this.service.addArticulo(articulos)
+    this.service.addArticulo(this.articulos)
     .subscribe(data=>{
       alert("Agregado con Éxito!!!");
       this.router.navigate(["listar"]);
+      console.log(data);
     })
   }
 
