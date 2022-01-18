@@ -1,0 +1,35 @@
+<div class="container">
+    <div class="card">
+        <div class="card_header">
+            <h3>Algo</h3>
+        </div>
+        <div class="card-body">
+            <table class="table-hover">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Articulo</th>
+                        <th>Fecha Compra</th>
+                        <th>Valor Compra</th>
+                        <th>Tipo Articulo</th>
+                        <th>Serial</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let articulo of articulos" class="text-canter">
+                        <td {{articulo.id}}></td>
+                        <td {{articulo.articuloNombre}}></td>
+                        <td {{articulo.fechaCompra}}></td>
+                        <td {{articulo.valorCompra}}></td>
+                        <td {{articulo.tipoArticulo}}></td>
+                        <td {{articulo.serial}}></td>
+                        <td>
+                            <button class="btn btn-warning" style="margin-left: 15px;">Editar</button>
+                            <button class="btn btn-danger" style="margin-left: 15px;">Borrar</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
